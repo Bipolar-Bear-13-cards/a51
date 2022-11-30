@@ -13,8 +13,6 @@ def user_input_ciphertext(): #ввод зашифрованного текста
 	return ciphertext
 
 
-
-
 StrCi=Cipher_a5()
 StrCi.set_key()
 ciphertext = str(user_input_ciphertext())

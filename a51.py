@@ -2,11 +2,6 @@ import re
 import os
 
 
-
-
-
-
-
 def user_input_choice(): #ввод номера пункта меню
 	someIn = str(input('[0]: Выход\n[1]: Зашифровать\n[2]: Расшифровать\nВведите 0, 1, или 2: '))
 	if (someIn == '0' or someIn == '1' or someIn == '2'):
