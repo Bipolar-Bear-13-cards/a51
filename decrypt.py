@@ -16,5 +16,5 @@ def user_input_ciphertext(): #ввод зашифрованного текста
 StrCi=Cipher_a5()
 StrCi.set_key()
 ciphertext = str(user_input_ciphertext())
-print(StrCi.decrypt(ciphertext))
+print("расшифрованный текст: "+StrCi.decrypt(ciphertext))
 input("для продолжения нажмите Enter")
