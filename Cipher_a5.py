@@ -28,11 +28,13 @@ class Cipher_a5():
 		self.__strelka__([(15,150),(15,115),(20,115),(20,90)])
 		self.__demoxor__(10,20,80)
 		self.__strelka__([(30,80),(314,80),(314,162),(299,162)])
+		self.__strelka__([(120,150),(120,75),(384,75),(384,60)])
 
 		self.__strelka__([(-153,10),(-153,-60),(-138,-60)])
 		self.__strelka__([(-132,10),(-132,-25),(-128,-25),(-128,-50)])
 		self.__demoxor__(10,-128,-60)
 		self.__strelka__([(-118,-60),(314,-60),(314,22),(299,22)])
+		self.__strelka__([(78,34),(78,40),(329,40)])
 
 		self.__strelka__([(-174,-130),(-174,-200),(-144,-200)])
 		self.__strelka__([(-153,-130),(-153,-165),(-134,-165),(-134,-190)])
@@ -44,6 +46,26 @@ class Cipher_a5():
 		self.__strelka__([(141,-130),(141,-190)])
 		self.__demoxor__(10,141,-200)
 		self.__strelka__([(151,-200),(314,-200),(314,-118),(299,-118)])
+		self.__strelka__([(78,-106),(78,-91),(384,-91),(384,20)])
+		turtle.penup()
+		turtle.goto(329,20)
+		turtle.pendown()
+		for i in range(2):
+			turtle.fd(110)
+			turtle.left(90)
+			turtle.fd(40)
+			turtle.left(90)
+		turtle.penup()
+		turtle.goto(347,40)
+		turtle.pendown()
+		turtle.write("управление",font=("Times New Roman", 12, "normal"))
+		turtle.penup()
+		turtle.goto(334,25)
+		turtle.pendown()
+		turtle.write("тактированием",font=("Times New Roman", 12, "normal"))
+
+
+		
 
 	def __write_reg__(self,x,y,reg):
 		self.pen.penup()
@@ -200,7 +222,7 @@ class Cipher_a5():
 	def get_keystream(self,length): #вычисляет ключевой поток путем вычисления соответствующих индексов
 		wndow = turtle.Screen()
 		wndow.title("Шифр А5/1")
-		wndow.setup(700, 550)
+		wndow.setup(900, 550)
 		self.pen=turtle.Turtle()
 		self.lengthbit=length
 		self.pen.hideturtle()
